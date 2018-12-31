@@ -1,0 +1,81 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sikshagray"
+    tools:context="com.example.hyeon.siksha2android.dev.Fragment.MainListFragment">
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Today"
+        android:background="@drawable/radio_day"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:id="@+id/cb_today"
+        android:textColor="@color/selector_text"
+        app:layout_constraintEnd_toStartOf="@+id/cb_tomorrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:button="@null"/>
+
+    <CheckBox
+        android:id="@+id/cb_tomorrow"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/radio_day"
+        android:gravity="center"
+        android:text="Tomorrow"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/selector_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cb_today"
+        android:button="@null"/>
+
+    <CheckBox
+        android:id="@+id/cb_break"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/radio_break"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_lunch"
+        app:layout_constraintEnd_toStartOf="@+id/cb_lunch"
+        app:layout_constraintTop_toTopOf="@+id/cb_lunch"
+        android:button="@null"/>
+
+    <CheckBox
+        android:id="@+id/cb_lunch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/radio_lunch"
+        app:layout_constraintEnd_toEndOf="@+id/cb_tomorrow"
+        app:layout_constraintStart_toStartOf="@+id/cb_today"
+        app:layout_constraintTop_toBottomOf="@+id/cb_tomorrow"
+        android:button="@null"/>
+
+    <CheckBox
+        android:id="@+id/cb_dinner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/radio_dinner"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_lunch"
+        app:layout_constraintStart_toEndOf="@+id/cb_lunch"
+        app:layout_constraintTop_toTopOf="@+id/cb_lunch"
+        android:button="@null"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:button="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_lunch"
+        />
+
+</android.support.constraint.ConstraintLayout>

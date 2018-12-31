@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purewhite"
+    tools:context="com.example.hyeon.siksha2android.dev.MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="0dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/titlebar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textlines"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/rb_main"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/radio_main"
+            android:button="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/rb_star"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/radio_star"
+            android:button="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/rb_main"
+            app:layout_constraintEnd_toStartOf="@+id/rb_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rb_main"
+            />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/rb_setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/radio_setting"
+            android:button="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/rb_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rb_main"
+            app:layout_constraintTop_toTopOf="@+id/rb_main"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.hyeon.siksha2android.dev.Fragment.MainListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlebar"
+        />
+
+</android.support.constraint.ConstraintLayout>

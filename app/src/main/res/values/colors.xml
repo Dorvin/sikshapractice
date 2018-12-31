@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="purewhite">#FFFFFF</color>
+    <color name="sikshamain">#FE934F</color>
+    <color name="sikshagray">#f2f2f2</color>
+    <color name="sikshawhite">#FFFFFF</color>
+    <color name="chargray">#B9B9B9</color>
+</resources>
