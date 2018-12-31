@@ -23,6 +23,13 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class LoadingActivity : AppCompatActivity() {
+    companion object {
+        private const val EXTRA_GOOD = "EXTRA_GOOD"
+
+        fun createIntent(context: Context, good: Int) = Intent(context, LoadingActivity::class.java).apply {
+            putExtra(EXTRA_GOOD, good)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

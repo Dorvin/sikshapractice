@@ -40,7 +40,6 @@ class MainListFragment : Fragment() {
         val realm = Realm.getDefaultInstance()
         val datas = realm.where(Data::class.java).findAll()
         val extrainfos = realm.where(Extra::class.java).findAll()
-        extrainfos.addChangeListener(RealmObjectChangeListener<RealmResults<Extra>> { t, changeSet -> })
         val temp = Extra()
         temp.today = "errortoday"
         temp.tomorrow = "errortomorrow"

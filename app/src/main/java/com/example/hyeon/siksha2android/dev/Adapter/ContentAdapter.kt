@@ -1,6 +1,7 @@
 package com.example.hyeon.siksha2android.dev.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.CheckBox
 import android.widget.TextView
 import com.example.hyeon.siksha2android.dev.Interface.ShowInfo
 import com.example.hyeon.siksha2android.R
+import com.example.hyeon.siksha2android.dev.LoadingActivity
 import com.example.hyeon.siksha2android.dev.Model.Extra
 import com.example.hyeon.siksha2android.dev.Util.IsOpen
 import com.example.hyeon.siksha2android.dev.ViewHolder.ContentViewHolder
@@ -53,6 +55,20 @@ class ContentAdapter(var mcontext: Context, var content_list: List<Menu>, var fu
         else holder.open.setText("CLOSE")
         val meals = menu.meals
         holder.menusholder.removeAllViews()
+//        meals?.also {
+//            5
+//        }
+//        4?.let {
+//            val intent = Intent()
+//            intent.putExtra(LoadingActivity.EXTRA_GOOD, 5)
+//        }
+//        meals?.let {
+//            if (it.isEmpty()) {
+//                it.forEachIndexed { index, meal ->
+//
+//                }
+//            }
+//        }
         when{
             meals != null -> {
                 if(meals.size != 0) {
